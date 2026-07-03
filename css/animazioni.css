@@ -1,0 +1,25 @@
+/* Stato iniziale (fuori schermo) */
+.effect01 {
+  opacity: 0;
+  transform: translate(0,50px); /* Spostato in basso di 50px */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  will-change: opacity, transform; /* Ottimizzazione per il browser */
+}
+.effect02 {
+  opacity: 0;
+  transform: translate(0,50px); /* Spostato in basso di 50px */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform; /* Ottimizzazione per il browser */
+}
+.effect03 {
+  opacity: 0;
+  transform: translate(0,50px); /* Spostato in basso di 50px */
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  will-change: opacity, transform; /* Ottimizzazione per il browser */
+}
+
+/* Stato finale (quando entra nello schermo) */
+.show {
+  opacity: 1;
+  transform: translate(0,0); /* Torna alla posizione originale */
+}

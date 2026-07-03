@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- SEO -->
+      <title>Migliora la Visibilità del tuo Studio Dentistico | DentistaStudioWeb</title>
+      <meta name="description" content="Creiamo siti web professionali e ottimizzati SEO per studi dentistici. Aiutiamo i dentisti a comparire su Google, aumentare la visibilità locale e ottenere più appuntamenti da nuovi pazienti." />
+      
+      <!-- da rimuovere per essere indicizzato -->
+		<meta name="robots" content="noindex, nofollow">
+      <!-- <meta name="robots" content="index, follow"> -->
+
+      <!-- style -->
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+      <link rel="stylesheet" href="css/animazioni.css" type="text/css">
+      <link rel="stylesheet" href="css/globals.css" type="text/css">
+
+      <!-- favicon -->
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+      <!-- opengraph -->
+      <!-- <meta property="og:title" content="DentistaStudioWeb | Più Pazienti per il tuo Studio Dentistico" />
+      <meta property="og:description" content="Creazione siti web professionali e SEO per Dentisti. Ottimizziamo la tua presenza online per farti trovare dai pazienti nella tua zona." />
+      <meta property="og:url" content="https://dentistastudioweb.com/" />
+      <meta property="og:image" content="https://dentistastudioweb.com/images/hero-5.png" />
+      <meta property="og:type" content="website" /> -->
+      <!-- UMAMI - Analytics -->
+   </head>
+   <body>
+
+      <div id="contactModal" class="modal">
+         <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title">Contattaci</h2>
+            <div class="contact-item">
+               <p>Per una risposta veloce</p>
+               <a href="https://wa.me/3913481506" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                     <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.26 4.88L2 22l5.25-1.23A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.61 0-3.12-.43-4.42-1.18l-.32-.18-3.12.73.74-3.04-.2-.31A7.96 7.96 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.39-5.46c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12s-.62.78-.76.94c-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3s-.84.82-.84 2c0 1.17.86 2.31.98 2.47.12.16 1.7 2.6 4.12 3.64.58.25 1.03.39 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
+                  </svg>
+                  WhatsApp
+               </a>
+            </div>
+            <div class="contact-item">
+               <p>Chiama quando vuoi</p>
+               <a href="tel:+3913481506">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                     <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V21c0 .55-.45 1-1 1C10.07 22 2 13.93 2 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                  +39 391 348 1506
+               </a>
+            </div>
+            <div class="contact-item">
+               <p>Invia una Email</p>
+               <a href="mailto:alex.beery08@gmail.com">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 3.2-8 5-8-5V6l8 5 8-5v1.2z"/>
+                  </svg>
+                  alex.beery08@gmail.com
+               </a>
+            </div>
+         </div>
+      </div>
+
+      <header id="header">
+         <div class="cs-container">
+            <a href="index.html" class="cta-telefono-m" aria-label="chiama lo studio dentistico">
+                  <img src="images/icona-telefono.png" alt="chiama lo studio dentistico" width="210" height="29" decoding="async">
+            </a>
+            <a href="index.html" class="cs-logo" aria-label="ritorna alla home page">
+                  <img src="images/logo-m.png" alt="logo di Dental Marina" width="210" height="29" decoding="async">
+            </a>
+            <nav class="cs-nav" role="navigation">
+                  <button class="cs-toggle" aria-label="mobile menu toggle">
+                     <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                     </div>
+                  </button>
+                  <div class="cs-ul-wrapper">
+                     <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                              <a href="index.html" class="cs-li-link cs-active">
+                                 Home
+                              </a>
+                        </li>
+                        <li class="cs-li cs-dropdown" tabindex="0">
+                              <span class="cs-li-link">
+                                 Servizi
+                                 <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                              </span>
+                              <ul class="cs-drop-ul">
+                                 <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">implantologia dentale</a>
+                                 </li>
+                                 <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">ortodonzia</a>
+                                 </li>
+                                 <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">igiene e prevenzione</a>
+                                 </li>
+                                 <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">estetica dentale</a>
+                                 </li>
+                                 <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">conservativa ed ortodonzia</a>
+                                 </li>
+                                 <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">protesi dentale</a>
+                                 </li>
+                                 <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">chirurgia orale</a>
+                                 </li>
+                                 <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">odontoiatria pediatrica</a>
+                                 </li>
+                              </ul>
+                        </li>
+                        <li class="cs-li">
+                              <a href="" class="cs-li-link">
+                                 Gallery
+                              </a>
+                        </li>
+                        <li class="cs-li">
+                              <a href="" class="cs-li-link">
+                                 Contatti
+                              </a>
+                        </li>
+                     </ul>
+                  </div>
+            </nav>
+            <a href="" class="btn-main">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+               </svg>
+               Prenota Visita
+            </a>
+         </div>
+      </header>
+
+      <button class="btn-main side-button"><svg
+         width="24"
+         height="24"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+      >
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>Urgenza Odontoiatrica</button>
+
+      <section id="hero">
+         <div class="cs-container d-block d-lg-none">
+            <div class="cs-content">
+                  <span class="cs-topper">DENTAL MARINA</span>
+                  <h1 class="cs-title">Il sorriso che meriti, la professionalità che cerchi</h1>
+                  <p class="cs-text">
+                     Da anni ci prendiamo cura della salute orale di adulti e bambini con trattamenti odontoiatrici moderni, 
+                     tecnologie avanzate e un approccio centrato sul paziente.
+                  </p>
+                  <a href="" class="cs-button-solid">Prenota una Visita</a>
+            </div>
+         </div>
+         <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="images/pic-fullscreen-home.jpg">
+            <source media="(min-width: 601px)" srcset="images/pic-fullscreen-home.jpg">
+            <img decoding="async" src="images/pic-fullscreen-home.jpg" alt="dentisti" width="1920" height="746" aria-hidden="true">
+         </picture>
+      </section>
+
+      <section id="sbs-1591">
+         <div class="cs-container">
+            <div class="cs-image-group">
+                  <picture class="cs-picture cs-picture1 animation effect01">
+                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg">
+                     <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg">
+                     <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg" alt="modelle" width="413" height="500" class="zoom-img">
+                  </picture>
+                  <picture class="cs-picture cs-picture2 animation effect03">
+                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg">
+                     <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg">
+                     <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg" alt="accessori" width="413" height="280" class="zoom-img">
+                  </picture>
+            </div>
+            <div class="cs-content">
+                  <span class="cs-topper">Chi Siamo</span>
+                  <h2 class="cs-title">Una realtà odontoiatrica costruita sulla fiducia</h2>
+                  <p class="cs-text">
+                     Dental Marina Gestione Studi Odontoiatrici nasce con l'obiettivo di offrire cure dentali di 
+                     alta qualità in un ambiente accogliente, moderno e professionale.<br><br>
+
+                     Ogni percorso terapeutico viene personalizzato in base alle esigenze del paziente, grazie a un 
+                     team qualificato che mette al centro ascolto, prevenzione e benessere.<br><br>
+
+                     La nostra missione è garantire trattamenti efficaci e duraturi, accompagnando ogni persona verso 
+                     una salute orale ottimale e un sorriso sicuro.
+                  </p>
+                  <!-- <a href="" class="cs-button-solid">Scopri lo Studio</a> -->
+            </div>
+         </div>
+      </section>
+
+      <section id="reviews-1672">
+         <div class="cs-container">
+            <div class="cs-content">
+                  <span class="cs-topper">Recensioni</span>
+                  <h2 class="cs-title">Le esperienze dei nostri pazienti</h2>
+            </div>
+            <ul class="cs-card-group">
+               <!-- card 01 -->
+               <li class="cs-item animation effect01">
+                  <div class="cs-flex-group">
+                     <picture class="cs-picture">
+                        <svg class="cs-profile" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" loading="lazy" decoding="async" alt="icona google" viewBox="0 0 48 48">
+                           <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                        </svg>
+                     </picture>
+                     <span class="cs-name">
+                           Mario Rossi
+                           <span class="cs-job">Google Reviews</span>
+                     </span>
+                  </div>
+                  <div class="wrapper">
+                     <img class="cs-item-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="icona stelle" width="96" height="16">
+                     <p class="cs-review">
+                           “Personale gentile e molto professionale. Mi sono sentito subito a mio agio.”
+                     </p>
+                  </div>
+                  <img class="cs-quote" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="icona citazione virgolette" width="120" height="99">
+               </li>
+               <!-- card 02 -->
+               <li class="cs-item animation effect02">
+                  <div class="cs-flex-group">
+                     <picture class="cs-picture">
+                        <svg class="cs-profile" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" loading="lazy" decoding="async" alt="icona google" viewBox="0 0 48 48">
+                           <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                        </svg>
+                     </picture>
+                     <span class="cs-name">
+                           Mario Rossi
+                           <span class="cs-job">Google Reviews</span>
+                     </span>
+                  </div>
+                  <div class="wrapper">
+                     <img class="cs-item-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="icona stelle" width="96" height="16">
+                     <p class="cs-review">
+                           “Studio moderno e pulito, trattamenti spiegati in modo chiaro. Consigliatissimo.”
+                     </p>
+                  </div>
+                  <img class="cs-quote" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="icona citazione virgolette" width="120" height="99">
+               </li>
+               <!-- card 03 -->
+               <li class="cs-item animation effect03">
+                  <div class="cs-flex-group">
+                     <picture class="cs-picture">
+                        <svg class="cs-profile" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" loading="lazy" decoding="async" alt="icona google" viewBox="0 0 48 48">
+                           <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                        </svg>   
+                     </picture>
+                     <span class="cs-name">
+                           Mario Rossi
+                           <span class="cs-job">Google Reviews</span>
+                     </span>
+                  </div>
+                  <div class="wrapper">
+                     <img class="cs-item-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="icona stelle" width="96" height="16">
+                     <p class="cs-review">
+                           “Ottima esperienza, risultati eccellenti e grande attenzione al paziente.”
+                     </p>
+                  </div>
+                  <img class="cs-quote" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="icona citazione virgolette" width="120" height="99">
+               </li>
+            </ul>
+         </div>
+      </section>
+
+      <section id="services-2355">
+         <div class="cs-container">
+            <div class="cs-content">
+                  <span class="cs-topper">I Nostri Trattamenti</span>
+                  <h2 class="cs-title">Soluzioni complete per la salute del tuo sorriso</h2>
+            </div>                  
+            <ul class="cs-card-group">
+                  <li class="cs-item">
+                     <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg">
+                              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg">
+                              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg" alt="costruzione" width="305" height="340">
+                        </picture>
+                        <h3 class="cs-h3">Implantologia Dentale</h3>
+                        <p class="cs-item-text">
+                              Ripristino funzionale ed estetico dei denti mancanti
+                        </p>
+                     </a>
+                  </li>
+                  <li class="cs-item">
+                     <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg">
+                              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg">
+                              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg" alt="costruzione" width="305" height="340">
+                        </picture>
+                        <h3 class="cs-h3">Ortodonzia</h3>
+                        <p class="cs-item-text">
+                              Allineamento dentale per adulti e bambini
+                        </p>
+                     </a>
+                  </li>
+                  <li class="cs-item">
+                     <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building15.jpg">
+                              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building15.jpg">
+                              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building15.jpg" alt="costruzione" width="305" height="340">
+                        </picture>
+                        <h3 class="cs-h3">Igiene e Prevenzione</h3>
+                        <p class="cs-item-text">
+                              Programmi personalizzati per mantenere denti e gengive sani
+                        </p>
+                     </a>
+                  </li>
+                  <li class="cs-item">
+                     <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg">
+                              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg">
+                              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg" alt="costruzione" width="305" height="340">
+                        </picture>
+                        <h3 class="cs-h3">Estetica Dentale</h3>
+                        <p class="cs-item-text">
+                              Sbiancamento professionale e miglioramento del sorriso
+                        </p>
+                     </a>
+                  </li>
+                  <li class="cs-item">
+                     <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg">
+                              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg">
+                              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg" alt="costruzione" width="305" height="340">
+                        </picture>
+                        <h3 class="cs-h3">Conservativa ed Endodonzia</h3>
+                        <p class="cs-item-text">
+                              Trattamenti per preservare la salute dei denti naturali
+                        </p>
+                     </a>
+                  </li>
+                  <li class="cs-item">
+                     <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg">
+                              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg">
+                              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg" alt="costruzione" width="305" height="340">
+                        </picture>
+                        <h3 class="cs-h3">Protesi Dentali</h3>
+                        <p class="cs-item-text">
+                              Soluzioni fisse e mobili per ogni esigenza
+                        </p>
+                     </a>
+                  </li>
+                  <li class="cs-item">
+                     <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building15.jpg">
+                              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building15.jpg">
+                              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building15.jpg" alt="costruzione" width="305" height="340">
+                        </picture>
+                        <h3 class="cs-h3">Chirurgia Orale</h3>
+                        <p class="cs-item-text">
+                              Interventi eseguiti con tecniche moderne e minimamente invasive
+                        </p>
+                     </a>
+                  </li>
+                  <li class="cs-item">
+                     <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg">
+                              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg">
+                              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building16.jpg" alt="costruzione" width="305" height="340">
+                        </picture>
+                        <h3 class="cs-h3">Odontoiatria Pediatrica</h3>
+                        <p class="cs-item-text">
+                              Cure dedicate ai più piccoli in un ambiente sereno
+                        </p>
+                     </a>
+                  </li>
+            </ul>
+         </div>
+      </section>
+
+      <section id="gallery-42">
+         <div class="cs-container">
+            <div class="cs-content">
+                  <div class="cs-flex">
+                     <span class="cs-topper">La Nostra Struttura</span>
+                     <h2 class="cs-title">Ambienti moderni, accessibili e progettati per il benessere del paziente</h2>
+                  </div>
+                  <div class="cs-flex">
+                     <p class="cs-text">
+                        Dental Marina è dotato di attrezzature odontoiatriche di ultima generazione e 
+                        di spazi completamente accessibili alle persone con disabilità.
+                     </p>
+                     <a aria-label="Scopri tutti i nostri eventi" href="" class="cs-link">
+                        Guarda la Galleria
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.01 11H5C4.45 11 4 11.45 4 12C4 12.55 4.45 13 5 13H16.01V14.79C16.01 15.24 16.55 15.46 16.86 15.14L19.64 12.35C19.83 12.15 19.83 11.84 19.64 11.64L16.86 8.84999C16.55 8.52999 16.01 8.75999 16.01 9.19999V11Z" fill="#14142B"/>
+                        </svg>
+                     </a>
+                  </div>
+            </div>
+            <div class="cs-image-group">
+                  <picture class="cs-picture cs-picture-1">
+                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra1-m.jpg">
+                     <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra1.jpg">
+                     <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra1.jpg" alt="violinisti che suonano" width="380" height="271">
+                  </picture>
+                  <picture class="cs-picture cs-picture-2">
+                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra2-m.jpg">
+                     <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra2.jpg">
+                     <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra2.jpg" alt="violinisti che suonano" width="380" height="271">
+                  </picture>
+                  <picture class="cs-picture cs-picture-3">
+                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra3-m.jpg">
+                     <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra3.jpg">
+                     <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra3.jpg" alt="violinisti che suonano" width="780" height="582">
+                  </picture>
+                  <picture class="cs-picture cs-picture-4">
+                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra4-m.jpg">
+                     <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra4.jpg">
+                     <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra4.jpg" alt="violinisti che suonano" width="780" height="582">
+                  </picture>
+                  <picture class="cs-picture cs-picture-5">
+                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra5-m.jpg">
+                     <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra5.jpg">
+                     <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra5.jpg" alt="violinisti che suonano" width="380" height="271">
+                  </picture>
+                  <picture class="cs-picture cs-picture-6">
+                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra6-m.jpg">
+                     <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra6.jpg">
+                     <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra6.jpg" alt="violinisti che suonano" width="380" height="271">
+                  </picture>
+            </div>
+         </div>
+      </section>
+
+      <section>
+         <div class="carousel-wrapper">
+            <div class="carousel-window">
+               <div class="carousel-track">
+                  <div class="carousel-item"><img src="images/laser.jpg" alt=""></div>
+                  <div class="carousel-item"><img src="images/laser.jpg" alt=""></div>
+                  <div class="carousel-item"><img src="images/laser.jpg" alt=""></div>
+                  <div class="carousel-item"><img src="images/laser.jpg" alt=""></div>
+                  <div class="carousel-item"><img src="images/laser.jpg" alt=""></div>
+               </div>
+            </div>
+
+            <div class="carousel-controls">
+               <button class="btn-prev">Indietro</button>
+               <button class="btn-next">Avanti</button>
+            </div>
+         </div>
+      </section>
+
+      <section id="prefooter">
+         <img src="images/prefooter01.png" alt="prefooter" loading="lazy">
+      </section>
+
+      <footer id="cs-footer-1782">
+         <div class="cs-container">
+            <div class="cs-logo-group">
+                  <a aria-label="go back to home" class="cs-logo" href="">
+                     <img class="cs-logo-img" src="https://csimages.lon1.digitaloceanspaces.com/pics/dentista/logo/logo01-w.png" alt="logo" loading="lazy" decoding="async" width="210" height="29">
+                  </a>
+                  <p class="cs-text">
+                     Dental Marina Gestione Studi Odontoiatrici offre trattamenti odontoiatrici completi con un 
+                     approccio professionale, innovativo e orientato al benessere del paziente.
+                  </p>
+                  <div class="cs-contact">
+                     <div class="cs-contact-info">
+                        <span class="cs-topper">Prenota Ora</span>
+                        <a href="tel:+391234567890" class="cs-contact-link">+39 123 456 7890</a>
+                     </div>
+                     <div class="cs-contact-info">
+                        <span class="cs-topper">Vieni a trovarci</span>
+                        <a href="" class="cs-contact-link">Via Castelgrande 123, Italia 12435</a>
+                     </div>
+                  </div>
+            </div>
+            <div class="cs-ul-wrapper">
+                  <span class="cs-header">Servizi</span>
+                  <ul class="cs-ul">
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Igiene dentale e prevenzione</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Odontoiatria conservativa</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Endodonzia</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Implantologia</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Ortodonzia</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Sbiancamento dentale</a>
+                     </li>
+                  </ul>
+            </div>
+            <div class="cs-ul-wrapper">
+                  <span class="cs-header">Links</span>
+                  <ul class="cs-ul">
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Home</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Chi Siamo</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Servizi</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Recensioni</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">FAQ</a>
+                     </li>
+                     <li class="cs-li">
+                        <a class="cs-link" href="">Contattaci</a>
+                     </li>
+                  </ul>
+            </div>
+            <table class="cs-table">
+                  <tbody>
+                     <tr>
+                        <th scope="row">Lunedì</th>
+                        <td>9.00 - 11.00</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Martedì</th>
+                        <td>9.00 - 11.00</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Mercoledì</th>
+                        <td>9.00 - 11.00</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Giovedì</th>
+                        <td>9.00 - 11.00</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Venerdì</th>
+                        <td>9.00 - 11.00</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Sabato</th>
+                        <td>9.00 - 11.00</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Domenica</th>
+                        <td>9.00 - 11.00</td>
+                     </tr>
+                  </tbody>
+            </table>
+         </div>
+         <div class="cs-bottom">
+            <span class="cs-credit">
+                  © Copyright - <a href="" class="cs-credit-link" target="_blank">Nome Studio</a> - Credits: <a href="" class="cs-credit-link" target="_blank">DentistaStudioWeb.com</a>
+            </span>
+            <div class="cs-bottom-links">
+                  <a href="" class="cs-bottom-link">Termini & Condizioni</a>
+                  <a href="" class="cs-bottom-link">Privacy Policy</a>
+            </div>
+         </div>
+      </footer>
+
+      <script src="js/embla-carousel.umd.js"></script>
+      <script src="js/medium-zoom.js"></script>
+      <script src="js/custom.js"></script>
+      
+   </body>
+</html>
+
