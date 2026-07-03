@@ -1,0 +1,59 @@
+/* FONT FAMILY ********************************/
+@font-face{font-family:'Antigua Presidente';src:url(../fonts/AntiguaPresidenteRegular.woff2) format("woff2"),url(../fonts/AntiguaPresidenteRegular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+.font-antigua{font-family:'Antigua Presidente';font-weight:400;font-style:normal}
+@font-face{font-family:'Urbanist';src:url(../fonts/Urbanist-Regular.woff2) format("woff2"),url(../fonts/Urbanist-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+.font-urbanist{font-family:'Urbanist';font-weight:400;font-style:normal}
+@font-face{font-family:'Poppins';src:url(../fonts/Poppins-Regular.woff2) format("woff2"),url(../fonts/Poppins-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+.font-poppins{font-family:'Poppins';font-weight:400;font-style:normal}
+
+
+/* GENERALI ***************************/
+*,:before,:after{box-sizing:border-box}
+html {scroll-behavior: smooth}
+body {margin: 0;padding: 0;background-image: url('./images/bg-body.jpg');background-position: top left;background-repeat: repeat;background-attachment: fixed;}
+
+/* PALETTE ****************************/
+:root {
+    --primary: #0187a4;
+    --primaryLight: #0187a4;
+    --secondary: #e1c7b8;
+    --headerColor: #3d393b;
+    --bodyTextColor: #3d393b;
+    --bodyTextColorWhite: #ffffff;
+    --topperFontSize: clamp(.86rem, 3.6vw, 1rem);
+    --headerFontSize: clamp(1.5375rem, 7.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem clamp(2.5rem, 6.82vw, 6.25rem);
+}
+
+/* TITOLI ****************************/
+p{font-family:'Poppins',sans-serif;letter-spacing:1px}
+.cs-topper{font-size:var(--topperFontSize);font-family:'Antigua Presidente', sans-serif;text-transform:lowercase;color:var(--primary);
+    margin-bottom:.95rem;width:fit-content;}
+.cs-title{font-family:'Urbanist';font-size:var(--headerFontSize);font-weight:400;line-height:1.2em;max-width:43.75rem;margin:0 0 1rem;
+    color:var(--headerColor)}
+.cs-text{font-size:var(--bodyFontSize);line-height:1.5em;max-width:40.625rem;color:var(--bodyTextColor)}
+.primarylight{color:var(--primaryLight)!important;font-weight:700}
+
+/* BTN ********************************/
+.btn-main{text-align:center;font-size:.6rem;line-height:clamp(2.875rem,8vw,3.5rem);text-decoration:none;font-weight:700;min-width:10.875rem;margin:0;
+    overflow:hidden;color:#fff;padding:0 3rem;box-sizing:border-box;background-color:var(--primary);display:inline-block;position:relative;
+    z-index:1;letter-spacing:4px;text-transform:uppercase;font-family:'Montserrat', sans-serif;transition: all 0.3s ease;
+    display: flex;align-items: center;justify-content: center;gap: 15px;}
+.btn-main:hover{-webkit-box-shadow: 1px 5px 10px -4px #ffffff46;box-shadow: 1px 5px 10px -4px #ffffff46;background-color: var(--secondaryLight);}
+.btn-main.side-button {position: fixed;right: -159px;top: 50%;transform: translateY(-50%) rotate(-90deg);transform-origin: center;border: none;cursor: pointer;
+    z-index: 9999;}
+@media only screen and (min-width: 64rem) {
+    .btn-main{font-size: .8rem;gap: 12px;line-height: 2.2rem;letter-spacing: 3px}
+    .btn-main.side-button {right: -160px;}
+}
+
+/* UTILI ******************************/
+.d-none{display:none!important}
+.d-block{display:inline-block!important}
+.d-flex{display:flex!important}
+@media only screen and (min-width: 64rem) {
+.d-lg-none{display:none!important}
+.d-lg-block{display:inline-block!important}
+.d-lg-flex{display:flex!important}
+}
