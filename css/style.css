@@ -1,8 +1,8 @@
 
 /* HEADER *************************/
-#header{width:100%;padding:1rem 1rem;box-sizing:border-box;background-color:var(--dark);position:fixed;z-index:10000}
+#header{width:100%;padding:1rem 1rem;box-sizing:border-box;background-color:transparent;position:absolute;z-index:10000}
 #header .container{position: relative;display:flex;justify-content: space-between;max-width: 80vw;margin: auto;}
-#header .container .cta-nome,#header .container .cta-numero{color:#fff;text-decoration: none;text-transform: uppercase;letter-spacing: 4px;font-size: clamp(.5rem,2.5vw,.85rem)}
+#header .container .cta-nome,#header .container .cta-numero{color:var(--dark);text-decoration: underline;text-transform: uppercase;letter-spacing: 4px;font-size: clamp(.5rem,2.5vw,.8rem)}
 @media (max-width:768px){
    #header .container{justify-content:center;max-width:100%}
    #header .container .cta-numero{display:none}
@@ -10,7 +10,37 @@
 }
 
 /* HERO ***************************/
-#hero{background:linear-gradient(90deg,#e9942c3c 0%,transparent 90%);}
+#hero{height:100vh;background-image:url(../images/hero.jpg);background-size:cover;background-position:top left;background-repeat:no-repeat;padding: clamp(40px, 4vw, 300px)}
+#hero .container{display: flex;flex-direction: row;height: 100%;justify-content: end;align-items: end;}
+#hero .text{max-width:540px;margin:0 0 1.5rem;color: var(--white)}
+#hero .list{list-style:none;padding:0 1rem;margin:0;font-family:'Poppins',sans-serif;letter-spacing:1px}
+#hero .list li{position:relative;padding-left:42px;margin-bottom:18px;font-size:1rem;line-height:1.5;color:var(--white)}
+#hero .list li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;background-image:url(../images/check.png);background-repeat:no-repeat;background-position:center;background-size:contain}
+
+
+/* ESPERIENZA ***************************/
+#esperienza{position:relative;overflow:hidden;background-color: var(--dark)}
+#esperienza,#esperienza::before,#esperienza::after,#esperienza *,#esperienza ::before,#esperienza ::after{box-sizing:border-box}
+#esperienza::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern01.png);background-size:contain;
+   background-position:top left;background-repeat:repeat;width: 100%;}
+#esperienza .container{display:grid;position:relative;width:100%;margin-inline:auto;padding:var(--sectionPadding);gap:1rem;align-items:center}
+#esperienza .content,.figure{min-width:0}
+#esperienza .content{width:100%}
+#esperienza .figure{display:grid;margin:0;gap:var(--esperienza-space-3)}
+#esperienza .title{max-width:17ch;overflow-wrap:anywhere;color:var(--white);line-height:.98;text-wrap:balance}
+#esperienza .subtitle{max-width:44rem;line-height:1.5;text-wrap:pretty}
+#esperienza .text{max-width:40rem;margin-top:var(--esperienza-space-4);color:var(--white)}
+#esperienza .image{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform var(--esperienza-motion-medium) var(--esperienza-easing)}
+@media (min-width: 56rem) {
+#esperienza .container{grid-template-columns:minmax(0,1.05fr) minmax(20rem,0.95fr)}
+#esperienza .content{width:100%}
+}
+@media (min-width: 80rem) {
+#esperienza .container{grid-template-columns:minmax(0,1.1fr) minmax(26rem,0.9fr)}
+}
+
+/* HERO ***************************/
+/* #hero{background:linear-gradient(90deg,#e9942c3c 0%,transparent 90%);}
 #hero .container{min-height: 100vh;position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(2rem,4vw,4rem);width:min(92vw,100rem);margin:0 auto;padding:clamp(5.5rem,12vw,7.5rem) 0 clamp(3rem,6vw,5rem)}
 #hero figure{margin:0;min-width:0}
 #hero img{display:block;width:95%;height:auto}
@@ -42,9 +72,9 @@
 #hero .subtitle{letter-spacing:3px;margin:12px 0}
 #hero .list li{padding-left:36px}
 #hero .list li::before{width:20px;height:20px;top:3px}
-}
+} */
 /* HERO - decorazioni */
-#hero .hero-deco01{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
+/* #hero .hero-deco01{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
 #hero .hero-deco01 div{font-size: min(.5vw, 0.7rem);width: 100%;height: 0em}
 #hero .hero-deco01 div img{position: absolute;width:11%;max-width:17em;height: auto;transform: translateY(100%);left:80px;z-index:0}
 #hero .hero-deco02{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
@@ -52,7 +82,7 @@
 #hero .hero-deco02 div img{position: absolute;width:11%;max-width:27em;height: auto;transform: translateY(30%);right:80px;z-index:0}
 #hero .sicilia{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
 #hero .sicilia div{font-size: min(.5vw, 0.7rem);width: 100%;height: 0em}
-#hero .sicilia div img{position: absolute;width:13%;max-width:35em;height: auto;transform: translateY(-30%);bottom: 0;right:80px;z-index:0}
+#hero .sicilia div img{position: absolute;width:13%;max-width:35em;height: auto;transform: translateY(-30%);bottom: 0;right:80px;z-index:0} */
 
 
 /* CAROUSEL ********************************/
