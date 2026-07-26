@@ -19,7 +19,7 @@ body {margin:0;padding:0; font-family:'Poppins',sans-serif;overflow-x:hidden}
     --headerFontSize: clamp(2rem, 8vw, 4rem);
     --subtitleFontSize: clamp(.9rem, 3vw, 1.1rem);
     --bodyFontSize: 1rem;
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem clamp(2.5rem, 6.82vw, 6.25rem);
+    --sectionPadding: clamp(3.75rem, 7.82vw, 10rem) 1rem clamp(2.5rem, 6.82vw, 10rem);
 }
 
 /* TITOLI ****************************/
@@ -27,7 +27,7 @@ p{font-family:'Poppins',sans-serif;letter-spacing:1px}
 .topper{font-size:var(--topperFontSize);font-family:'Antigua Presidente', sans-serif;text-transform:capitalize;color:var(--primary);
     margin-bottom:.95rem;width:fit-content;}
 .title{font-family:'Franklin Gothic';font-size:var(--headerFontSize);line-height:1.2em;max-width:45rem;margin:0 0 1rem;
-    color:var(--dark);text-transform:uppercase;letter-spacing:10px}
+    color:var(--dark);text-transform:uppercase;letter-spacing:10px;font-style: italic}
 .subtitle{font-family:'Poppins',sans-serif;font-size:var(--subtitleFontSize);text-transform: uppercase;color: var(--dark);font-weight:100;letter-spacing: 10px;margin: 20px 0;}
 .text{font-size:var(--bodyFontSize);line-height:1.5em;max-width:40.625rem;color:var(--dark)}
 .primary{color:var(--primary)!important}
