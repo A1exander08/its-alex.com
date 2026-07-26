@@ -10,27 +10,39 @@
 }
 
 /* HERO ***************************/
-#hero{height:100vh;background-image:url(../images/hero.jpg);background-size:cover;background-position:top left;background-repeat:no-repeat;padding: clamp(40px, 4vw, 300px)}
-#hero .container{display: flex;flex-direction: row;height: 100%;justify-content: end;align-items: end;}
+#hero .container{display:flex;flex-direction:row;height:100%;justify-content:end;align-items:end;position:relative}
 #hero .text{max-width:540px;margin:0 0 1.5rem;color: var(--white)}
 #hero .list{list-style:none;padding:0 1rem;margin:0;font-family:'Poppins',sans-serif;letter-spacing:1px}
 #hero .list li{position:relative;padding-left:42px;margin-bottom:18px;font-size:1rem;line-height:1.5;color:var(--white)}
 #hero .list li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;background-image:url(../images/check.png);background-repeat:no-repeat;background-position:center;background-size:contain}
-
+@media (max-width:79.9rem){
+#hero{position:relative;overflow:hidden;background-color:var(--white)}
+#hero::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern02.png);background-size:cover;
+   background-position:bottom left;background-repeat:repeat;}
+#hero .container{padding:3rem 1rem 2.5rem}
+#hero .figure{display:grid;margin:0}
+#hero .figure img{width:100%;height:auto;margin-bottom: 1rem;}
+#hero .text{color: var(--dark)}
+#hero .list li{color:var(--dark)}
+#hero .list li::before{background-image:url(../images/check-dark.png)}
+}
+@media (min-width: 80rem) {
+#hero{height:100vh;background-image:url(../images/hero.jpg);background-size:cover;background-position:top left;background-repeat:no-repeat;padding: clamp(40px, 4vw, 300px)}
+}
 
 /* ESPERIENZA ***************************/
 #esperienza{position:relative;overflow:hidden;background-color: var(--dark)}
 #esperienza,#esperienza::before,#esperienza::after,#esperienza *,#esperienza ::before,#esperienza ::after{box-sizing:border-box}
-#esperienza::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern01.png);background-size:contain;
-   background-position:top left;background-repeat:repeat;width: 100%;}
-#esperienza .container{display:grid;position:relative;width:100%;margin-inline:auto;padding:var(--sectionPadding);gap:1rem;align-items:center}
+#esperienza::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern01.png);background-size:720px auto;
+   background-position:bottom left;background-repeat:repeat;}
+#esperienza .container{display:grid;position:relative;width:100%;max-width:90rem;margin-inline:auto;padding:clamp(3.75rem, 9vw, 15rem) 1rem clamp(2.5rem, 6.82vw, 10rem);gap:1rem;align-items:center}
 #esperienza .content,.figure{min-width:0}
 #esperienza .content{width:100%}
-#esperienza .figure{display:grid;margin:0;gap:var(--esperienza-space-3)}
+#esperienza .figure{display:grid;margin:0}
 #esperienza .title{max-width:17ch;overflow-wrap:anywhere;color:var(--white);line-height:.98;text-wrap:balance}
-#esperienza .subtitle{max-width:44rem;line-height:1.5;text-wrap:pretty}
-#esperienza .text{max-width:40rem;margin-top:var(--esperienza-space-4);color:var(--white)}
-#esperienza .image{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform var(--esperienza-motion-medium) var(--esperienza-easing)}
+#esperienza .subtitle{max-width:44rem;line-height:1.5;text-wrap:pretty;color: var(--white);font-weight: 20;}
+#esperienza .text{max-width:40rem;margin-top:1.5rem;color:var(--white)}
+#esperienza .image{display:block;width:100%;height:100%}
 @media (min-width: 56rem) {
 #esperienza .container{grid-template-columns:minmax(0,1.05fr) minmax(20rem,0.95fr)}
 #esperienza .content{width:100%}
@@ -38,51 +50,43 @@
 @media (min-width: 80rem) {
 #esperienza .container{grid-template-columns:minmax(0,1.1fr) minmax(26rem,0.9fr)}
 }
-
-/* HERO ***************************/
-/* #hero{background:linear-gradient(90deg,#e9942c3c 0%,transparent 90%);}
-#hero .container{min-height: 100vh;position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(2rem,4vw,4rem);width:min(92vw,100rem);margin:0 auto;padding:clamp(5.5rem,12vw,7.5rem) 0 clamp(3rem,6vw,5rem)}
-#hero figure{margin:0;min-width:0}
-#hero img{display:block;width:95%;height:auto}
-#hero .hero-content{min-width:0}
-#hero .title{max-width:100%;overflow-wrap:anywhere}
-#hero .list{list-style:none;padding:0 1rem;margin:0;font-family:'Poppins',sans-serif;letter-spacing:1px}
-#hero .list li{position:relative;padding-left:42px;margin-bottom:18px;font-size:clamp(1rem,2.2vw,1.125rem);line-height:1.5;color:var(--dark)}
-#hero .list li::before{content:"";position:absolute;left:0;top:4px;width:24px;height:24px;background-image:url(../images/check.png);background-repeat:no-repeat;background-position:center;background-size:contain}
-#hero .text{max-width:560px;margin:0 0 1.5rem}
-@media (max-width:1024px){
-   #hero .container{min-height:100%}
-#hero .title{letter-spacing:6px}
-#hero .subtitle{letter-spacing:6px}
-}
+/* ESPERIENZA - decorazioni */
+#esperienza .esperienza-deco{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
+#esperienza .esperienza-deco div{font-size: min(.5vw, 0.7rem);width: 100%;height: 0em}
+#esperienza .esperienza-deco div img{position:absolute;width:18%;max-width:34em;height:auto;right:-22px;z-index:0;top:-21px}
 @media (max-width:768px){
-#hero .container{grid-template-columns:1fr;justify-items:center;gap:2rem;width:min(100% - 2rem,37.5rem);padding:5.5rem 0 3rem;text-align:center}
-#hero img{max-width:22rem;margin:0 auto}
-#hero .hero-content{width:100%}
-#hero .topper,#hero .title,#hero .subtitle{margin-left:auto;margin-right:auto}
-#hero .title{letter-spacing:4px;font-size:clamp(1.75rem,8vw,2.75rem)}
-#hero .subtitle{letter-spacing:4px}
-#hero .text{max-width:100%;margin:0 auto 1.5rem}
-#hero .list{display:inline-block;text-align:left;padding:0;margin:0 auto}
-#hero .list li{font-size:1rem;margin-bottom:14px}
+   #esperienza .esperienza-deco div img{right:0;top:0}
 }
-@media (max-width:480px){
-#hero .container{width:min(100% - 1.5rem,100%);padding:5rem 0 2.5rem;gap:1.5rem}
-#hero .title{letter-spacing:2px}
-#hero .subtitle{letter-spacing:3px;margin:12px 0}
-#hero .list li{padding-left:36px}
-#hero .list li::before{width:20px;height:20px;top:3px}
-} */
-/* HERO - decorazioni */
-/* #hero .hero-deco01{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
-#hero .hero-deco01 div{font-size: min(.5vw, 0.7rem);width: 100%;height: 0em}
-#hero .hero-deco01 div img{position: absolute;width:11%;max-width:17em;height: auto;transform: translateY(100%);left:80px;z-index:0}
-#hero .hero-deco02{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
-#hero .hero-deco02 div{font-size: min(.5vw, 0.7rem);width: 100%;height: 0em}
-#hero .hero-deco02 div img{position: absolute;width:11%;max-width:27em;height: auto;transform: translateY(30%);right:80px;z-index:0}
-#hero .sicilia{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
-#hero .sicilia div{font-size: min(.5vw, 0.7rem);width: 100%;height: 0em}
-#hero .sicilia div img{position: absolute;width:13%;max-width:35em;height: auto;transform: translateY(-30%);bottom: 0;right:80px;z-index:0} */
+
+/* COMPETENZE ***************************/
+#competenze{position:relative;overflow:hidden;background-color: var(--dark)}
+#competenze,#competenze::before,#competenze::after,#competenze *,#competenze ::before,#competenze ::after{box-sizing:border-box}
+#competenze::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern01.png);background-size:720px auto;
+   background-position:top left;background-repeat:repeat;}
+#competenze .container{display:grid;position:relative;width:100%;max-width:90rem;margin-inline:auto;padding:clamp(2rem, 7.82vw, 7rem) 1rem clamp(2.5rem, 10vw, 15rem);gap:1rem;align-items:center;z-index:2}
+#competenze .content,.figure{min-width:0}
+#competenze .content{width:100%}
+#competenze .figure{display:grid;margin:0}
+#competenze .title{max-width:17ch;overflow-wrap:anywhere;color:var(--white);line-height:.98;text-wrap:balance}
+#competenze .subtitle{max-width:44rem;line-height:1.5;text-wrap:pretty;color: var(--white);font-weight: 20;}
+#competenze .categoria{margin-top:1rem;color:var(--primary);font-weight:700;font-size:18px;letter-spacing:5px}
+#competenze .list{list-style:none;padding:0 .5rem;margin:0;font-family:'Poppins',sans-serif;letter-spacing:1px} #competenze .list li{position:relative;padding-left:32px;margin-bottom:18px;font-size:1rem;line-height:1.5;color:var(--white)} #competenze .list li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;background-image:url(../images/check.png);background-repeat:no-repeat;background-position:center;background-size:contain}
+#competenze .image{display:block;width:100%;height:auto}
+@media (min-width: 56rem) {
+#competenze .container{grid-template-columns:minmax(0,1.05fr) minmax(20rem,0.95fr)}
+#competenze .content{width:100%}
+}
+@media (min-width: 80rem) {
+#competenze .container{grid-template-columns:minmax(0,1.1fr) minmax(26rem,0.9fr)}
+#competenze .image{width:90%}
+#competenze .list{list-style:none;padding:0 .5rem;margin:0;font-family:'Poppins',sans-serif;letter-spacing:1px;display:grid;grid-template-columns:repeat(2,max-content);gap:12px 28px;align-items:center}
+#competenze .list li{position:relative;padding-left:32px;margin-bottom:0;font-size:1rem;line-height:1.5;color:var(--white)}
+#competenze .list li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;background-image:url(../images/check.png);background-repeat:no-repeat;background-position:center;background-size:contain}
+}
+/* COMPETENZE - decorazioni */
+#competenze .competenze-deco{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
+#competenze .competenze-deco div{font-size: min(.5vw, 0.7rem);width: 100%;height: 0em}
+#competenze .competenze-deco div img{position:absolute;width:18%;max-width:34em;height:auto;left:2%;z-index:0;bottom:20px}
 
 
 /* CAROUSEL ********************************/
