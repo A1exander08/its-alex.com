@@ -1,12 +1,11 @@
-
 /* HEADER *************************/
 #header{width:100%;padding:1rem 1rem;box-sizing:border-box;background-color:transparent;position:absolute;z-index:10000}
 #header .container{position: relative;display:flex;justify-content: space-between;max-width: 80vw;margin: auto;}
 #header .container .cta-nome,#header .container .cta-numero{color:var(--dark);text-decoration: underline;text-transform: uppercase;letter-spacing: 4px;font-size: clamp(.5rem,2.5vw,.8rem)}
 @media (max-width:768px){
    #header .container{justify-content:center;max-width:100%}
-   #header .container .cta-numero{display:none}
-   #header .container .cta-nome{text-align: center}
+   #header .container .cta-nome{display:none}
+   #header .container .cta-numero{text-align: center}
 }
 
 /* HERO ***************************/
@@ -16,15 +15,10 @@
 #hero .list li{position:relative;padding-left:42px;margin-bottom:18px;font-size:1rem;line-height:1.5;color:var(--white)}
 #hero .list li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;background-image:url(../images/check.png);background-repeat:no-repeat;background-position:center;background-size:contain}
 @media (max-width:79.9rem){
-#hero{position:relative;overflow:hidden;background-color:var(--white)}
-#hero::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern02.png);background-size:cover;
-   background-position:bottom left;background-repeat:repeat;}
-#hero .container{padding:3rem 1rem 2.5rem}
-#hero .figure{display:grid;margin:0}
-#hero .figure img{width:100%;height:auto;margin-bottom: 1rem;}
-#hero .text{color: var(--dark)}
-#hero .list li{color:var(--dark)}
-#hero .list li::before{background-image:url(../images/check-dark.png)}
+#hero .text{display:none}
+#hero .list{display:none}
+#hero .container{padding:0;margin:0}
+#hero .image{width:100%;height:auto;margin-bottom:-10px}
 }
 @media (min-width: 80rem) {
 #hero{height:100vh;background-image:url(../images/hero.jpg);background-size:cover;background-position:top left;background-repeat:no-repeat;padding: clamp(40px, 4vw, 300px)}
@@ -57,6 +51,21 @@
 @media (max-width:768px){
    #esperienza .esperienza-deco div img{right:0;top:0}
 }
+/* ESPERIENZA - testi centrati */
+@media (max-width: 55.99rem) {
+#esperienza .content{display:flex;flex-direction:column;align-items:center;text-align:center}
+#esperienza .topper{margin-left:auto;margin-right:auto}
+#esperienza .title{text-align:center;margin-left:auto;margin-right:auto;max-width:none}
+#esperienza .subtitle{text-align:center;margin-left:auto;margin-right:auto}
+#esperienza .text{text-align:center;margin-left:auto;margin-right:auto}
+}
+
+/* DECORAZIONE TRA ESPERIENZA E COMPETENZE ********************************/
+.esperienza-competenze-deco{position:relative;z-index:1;width:100%;height:0;pointer-events:none}
+.esperienza-competenze-deco img{position:absolute;left:0;top:0;transform:translateY(-40%);width:16%;max-width:30em;height:auto;display:block}
+@media (min-width: 80rem) {
+.esperienza-competenze-deco img{position:absolute;left:0;top:0;transform:translateY(-20%);width:12%;max-width:20em;height:auto;display:block}
+}
 
 /* COMPETENZE ***************************/
 #competenze{position:relative;overflow:hidden;background-color: var(--dark)}
@@ -87,13 +96,91 @@
 #competenze .competenze-deco{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center}
 #competenze .competenze-deco div{font-size: min(.5vw, 0.7rem);width: 100%;height: 0em}
 #competenze .competenze-deco div img{position:absolute;width:18%;max-width:34em;height:auto;left:2%;z-index:0;bottom:20px}
+/* COMPETENZE - testi centrati ********************************/
+@media (max-width: 55.99rem) {
+#competenze .content{display:flex;flex-direction:column;align-items:center;text-align:center}
+#competenze .topper{margin-left:auto;margin-right:auto}
+#competenze .title{text-align:center;margin-left:auto;margin-right:auto;max-width:none}
+#competenze .subtitle{text-align:center;margin-left:auto;margin-right:auto}
+#competenze .categoria{text-align:center}
+#competenze .list{display:flex;flex-direction:column;align-items:center;padding:0;width:100%}
+#competenze .list li{width:fit-content;text-align:left;margin-left:auto;margin-right:auto}
+}
 
+/* LAVORI ********************************/
+#lavori{position:relative;overflow:hidden;background-color:var(--white)}
+#lavori,#lavori::before,#lavori::after,#lavori *,#lavori ::before,#lavori ::after{box-sizing:border-box}
+#lavori::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern02.png);background-size:720px auto;
+   background-position:top center;background-repeat:repeat}
+#lavori .container{position:relative;z-index:2;width:100%;max-width:100rem;margin-inline:auto;padding:clamp(3.75rem, 7.82vw, 10rem) 1rem}
+#lavori .lavori-heading{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:2.5rem}
+#lavori .title{margin:0;color:var(--dark);max-width:none}
+#lavori .subtitle{margin:1.25rem 0 0}
 
 /* CAROUSEL ********************************/
+.carousel-wrapper{position:relative;width:100%}
 .carousel-window{overflow:hidden}
 .carousel-track{display:flex;touch-action:pan-y pinch-zoom;margin-left:-1rem}
-.carousel-item{flex:0 0 50%;min-width:0;padding-left:1rem} /* flex: 0 0 100%;  1 img per slide - occupa il 100% dello spazio */
-.carousel-item img{width:100%;border-radius:12px;object-fit:cover}
-.carousel-controls{position:relative;display:flex;justify-content:center;gap:1rem;margin-top:1.5rem} /* position:absolute;top:50%;left:50%;transform:translate(-50%,-50%); */
-.btn-prev,.btn-next{padding:.5rem 1.5rem;background-color:#333;color:#fff;border:none;border-radius:20px;cursor:pointer;font-weight:700}
-.btn-prev:hover,.btn-next:hover{background-color:#555}
+.carousel-item{flex:0 0 100%;min-width:0;padding-left:1rem}
+.carousel-item img{display:block;width:100%;height:auto;border-radius:12px;object-fit:cover}
+.carousel-controls{display:flex;justify-content:center;align-items:center;gap:1.25rem;margin-top:2rem}
+.btn-prev,.btn-next{display:inline-flex;align-items:center;justify-content:center;padding:0;background:transparent;border:none;cursor:pointer;line-height:0;transition:transform .2s ease,opacity .2s ease}
+.btn-prev img,.btn-next img{display:block;width:clamp(2.5rem, 5vw, 3rem);height:auto}
+.btn-prev:hover,.btn-next:hover{transform:scale(1.08)}
+.btn-prev:focus-visible,.btn-next:focus-visible{outline:2px solid var(--primary);outline-offset:4px;border-radius:50%}
+@media (min-width: 56rem) {
+.carousel-item{flex:0 0 33.333%}
+}
+
+/* DECORAZIONE TRA LAVORI E FORMAZIONE ********************************/
+.lavori-formazione-deco{position:relative;z-index:1;width:100%;height:0;pointer-events:none}
+.lavori-formazione-deco img{position:absolute;right:0;top:0;transform:translateY(-50%);width:18%;max-width:34em;height:auto;display:block}
+
+/* FORMAZIONE ********************************/
+#formazione{position:relative;overflow:hidden;background-color:var(--white)}
+#formazione,#formazione::before,#formazione::after,#formazione *,#formazione ::before,#formazione ::after{box-sizing:border-box}
+#formazione::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern02.png);background-size:720px auto;
+   background-position:top center;background-repeat:repeat}
+#formazione .container{display:grid;position:relative;z-index:2;width:100%;max-width:90rem;margin-inline:auto;padding:clamp(3.75rem, 7.82vw, 10rem) 1rem;gap:2rem;align-items:center}
+#formazione .content,#formazione .figures{min-width:0}
+#formazione .content{width:100%}
+#formazione .title{max-width:17ch;overflow-wrap:anywhere;color:var(--dark);line-height:.98;text-wrap:balance}
+#formazione .subtitle{max-width:44rem;line-height:1.5;text-wrap:pretty;color:var(--dark)}
+#formazione .text{max-width:40rem;margin-top:1.5rem;color:var(--dark)}
+#formazione .figures{display:grid;gap:1rem;margin:0}
+#formazione .figure{display:grid;margin:0}
+#formazione .image{display:block;width:90%;height:auto}
+@media (min-width: 56rem) {
+#formazione .container{grid-template-columns:minmax(0,1.05fr) minmax(18rem,0.95fr);gap:2rem}
+}
+@media (min-width: 80rem) {
+#formazione .container{grid-template-columns:minmax(0,1.1fr) minmax(24rem,0.9fr);gap:3rem}
+}
+/* FORMAZIONE - decorazioni */
+#formazione .formazione-deco{width:100%;margin:auto;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#formazione .formazione-deco div{font-size:min(.5vw,0.7rem);width:100%;height:0}
+#formazione .formazione-deco div img{position:absolute;width:22%;max-width:28em;height:auto;left:2%;z-index:1;bottom:30px}
+/* FORMAZIONE - testi centrati ********************************/
+@media (max-width: 55.99rem) {
+#formazione .content{display:flex;flex-direction:column;align-items:center;text-align:center}
+#formazione .topper{margin-left:auto;margin-right:auto}
+#formazione .title{text-align:center;margin-left:auto;margin-right:auto;max-width:none}
+#formazione .subtitle{text-align:center;margin-left:auto;margin-right:auto}
+#formazione .text{text-align:center;margin-left:auto;margin-right:auto}
+#formazione .figures{justify-items:center}
+#formazione .image{width:100%;max-width:28rem}
+}
+
+/* CTA ********************************/
+#cta{position:relative;overflow:hidden;background-color:var(--dark)}
+#cta,#cta::before,#cta::after,#cta *,#cta ::before,#cta ::after{box-sizing:border-box}
+#cta::before{position:absolute;z-index:0;inset:0;content:"";background-image:url(../images/bg-pattern01.png);background-size:720px auto;
+   background-position:top left;background-repeat:repeat}
+#cta .container{position:relative;z-index:2;width:100%;max-width:90rem;margin-inline:auto;padding:clamp(3.75rem, 7.82vw, 8rem) 1rem clamp(2rem, 4vw, 3rem)}
+#cta .cta-heading{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:2.5rem}
+#cta .title{margin:0 0 1.5rem;color:var(--white);max-width:none;text-align:center}
+#cta .subtitle{margin:1.25rem 0 0;color:var(--white);text-align:center;max-width:none;font-size:clamp(.75rem, 3vw, 1.1rem);letter-spacing:5px}
+#cta .subtitle a{color:var(--primary);text-decoration:underline;text-underline-offset:4px}
+#cta .subtitle a:hover{opacity:.85}
+#cta hr{border:0;border-top:1px solid rgba(255,255,255,.25);margin:2.5rem auto 1.5rem;max-width:90rem}
+#cta .copyright{margin:0;text-align:center;color:var(--white);font-size:.75rem;letter-spacing:4px}
