@@ -27,7 +27,7 @@ p{font-family:'Poppins',sans-serif;letter-spacing:1px}
 .topper{font-size:var(--topperFontSize);font-family:'Antigua Presidente', sans-serif;text-transform:capitalize;color:var(--primary);
     margin-bottom:.95rem;width:fit-content;}
 .title{font-family:'Franklin Gothic';font-size:var(--headerFontSize);line-height:1.2em;max-width:45rem;margin:0 0 1rem;
-    color:var(--dark);text-transform:uppercase;letter-spacing:10px;font-style: italic}
+    color:var(--dark);text-transform:uppercase;letter-spacing:5px;font-style: italic}
 .subtitle{font-family:'Poppins',sans-serif;font-size:var(--subtitleFontSize);text-transform: uppercase;color: var(--dark);font-weight:100;letter-spacing: 10px;margin: 20px 0;}
 .text{font-size:var(--bodyFontSize);line-height:1.5em;max-width:40.625rem;color:var(--dark)}
 .primary{color:var(--primary)!important}
@@ -36,8 +36,9 @@ p{font-family:'Poppins',sans-serif;letter-spacing:1px}
 .d-none{display:none!important}
 .d-block{display:inline-block!important}
 .d-flex{display:flex!important}
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 80rem) {
 .d-lg-none{display:none!important}
 .d-lg-block{display:inline-block!important}
 .d-lg-flex{display:flex!important}
+.title{letter-spacing:10px}
 }

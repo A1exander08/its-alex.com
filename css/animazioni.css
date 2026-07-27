@@ -1,25 +1,56 @@
-/* Stato iniziale (fuori schermo) */
-.effect01 {
+/* Fade-up elegante con stagger */
+.effect01,
+.effect02,
+.effect03,
+.effect-img {
   opacity: 0;
-  transform: translate(0,50px); /* Spostato in basso di 50px */
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  will-change: opacity, transform; /* Ottimizzazione per il browser */
-}
-.effect02 {
-  opacity: 0;
-  transform: translate(0,50px); /* Spostato in basso di 50px */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, transform; /* Ottimizzazione per il browser */
-}
-.effect03 {
-  opacity: 0;
-  transform: translate(0,50px); /* Spostato in basso di 50px */
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-  will-change: opacity, transform; /* Ottimizzazione per il browser */
+  will-change: opacity, transform;
 }
 
-/* Stato finale (quando entra nello schermo) */
-.show {
+.effect01,
+.effect02,
+.effect03 {
+  transform: translate3d(0, 36px, 0);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.effect01 { transition-delay: 0s; }
+.effect02 { transition-delay: 0.12s; }
+.effect03 { transition-delay: 0.24s; }
+
+.effect-img {
+  transform: translate3d(0, 40px, 0) scale(0.97);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.1s;
+}
+
+#formazione .figures .figure.effect-img:nth-child(2) {
+  transition-delay: 0.28s;
+}
+
+.effect01.show,
+.effect02.show,
+.effect03.show {
   opacity: 1;
-  transform: translate(0,0); /* Torna alla posizione originale */
+  transform: translate3d(0, 0, 0);
+}
+
+.effect-img.show {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .effect01,
+  .effect02,
+  .effect03,
+  .effect-img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
